@@ -23,7 +23,23 @@
 						<div class="content">
 							<div class="inner">
 								<h1>张文涛</h1>
-								<p>信息唯有分享才会有价值</p>
+								<p id="hitokoto"></p>
+                                <script>
+                                  $.ajax({
+                                      type: 'GET',
+                                          url: 'https://v1.hitokoto.cn',
+                                              dataType: 'jsonp',
+                                                  jsonp: 'callback',
+                                                      jsonpCallback: 'hitokoto',
+                                                          success (data) {
+                                                                $('#hitokoto').text(data.hitokoto)
+                                                                    },
+                                                                        error (jqXHR, textStatus, errorThrown) {
+                                                                              console.error(textStatus, errorThrown)
+                                                                                  }
+                                                                                    })
+                                                                                    </script>
+                                                                                    <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
 							</div>
 						</div>
 						<nav>
