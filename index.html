@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
+<link rel="stylesheet" href="css/player.css">
 <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 <link rel="shortcut icon" href="images/logo.ico"> 
 </head>
@@ -74,6 +75,68 @@
 </ul>
 </article>
 </div>
+
+       <div id="QPlayer">  
+          <div id="pContent">
+	         <div id="player">
+	         	<span class="cover"></span>
+	             	<div class="ctrl">
+			<div class="musicTag marquee">
+				<strong>Title</strong>
+				 <span> - </span>
+				<span class="artist">Artist</span>
+			</div>
+			<div class="progress">
+				<div class="timer left">0:00</div>
+				<div class="contr">
+					<div class="rewind icon"></div>
+					<div class="playback icon"></div>
+					<div class="fastforward icon"></div>
+				</div>
+				<div class="right">
+					<div class="liebiao icon"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	 <div class="ssBtn">
+	   <div class="adf"></div>
+    </div>
+</div>
+    <ol id="playlist"></ol>
+</div>
+   <script src="js/jquery.min.js"></script>
+   <script src="js/jquery.marquee.min.js"></script>
+<script>
+var	playlist = [{title: "谪仙",
+				artist: "叶里",
+				mp3: "http://music.163.com/song/media/outer/url?id=1421256202.mp3",
+				cover: "https://s1.ax1x.com/2020/08/03/aN8ObD.png",
+			},{title: "侧脸",
+				artist: "于果",
+				mp3: "http://music.163.com/song/media/outer/url?id=534542079.mp3",
+				cover: "https://s1.ax1x.com/2020/08/03/aN8ObD.png",
+			},{title: "无人之岛",             
+				artist: "任然",
+				mp3: "http://music.163.com/song/media/outer/url?id=493735012.mp3",
+				cover: "https://s1.ax1x.com/2020/08/03/aN8ObD.png",
+			},{title: "失眠飞行",
+				artist: "蕾儿",
+				mp3: "http://music.163.com/song/media/outer/url?id=1386055610.mp3",
+				cover: "https://s1.ax1x.com/2020/08/03/aN8ObD.png",
+			}];
+var isRotate = true;<!--图片旋转-->
+var autoplay = true;<!--自动播放-->
+</script>
+<script src="js/player.js"></script><script>
+function bgChange(){
+var lis= $('.lib');
+for(var i=0; i<lis.length; i+=2)
+lis[i].style.background = 'rgba(246, 246, 246, 0.5)';
+}
+window.onload = bgChange;
+</script>
+
 <!-- Footer -->
 <footer id="footer">
 <p class="copyright"><a target="_blank" href="https://github.com/zwtdwlid/zwtdwlid.github.io/releases/download/V1.0/7149.zip">点击这里下载本站源码</a></p> 
@@ -93,7 +156,6 @@
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<div id="music" key="60835589dbc28" api="http://music.asiry1.com"></div><script id="xplayer" src="http://music.asiry1.com/Static/player3/js/player.js" ></script>
 
 </body>
 </html>
